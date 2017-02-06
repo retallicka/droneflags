@@ -60,7 +60,7 @@ countries.addEventListener("change", function (e) {
   img.src = '../bower_components/flag-icon-css/flags/4x3/' + e.target.value + '.svg';
   console.log(img.src);
   img.addEventListener("load", function() {
-    runCode();
+    run();
   });
 });
 
