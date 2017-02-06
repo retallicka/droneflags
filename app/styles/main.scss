@@ -1,0 +1,22 @@
+// bower:scss
+// endbower
+
+html, body{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.star-container {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.star {
+  background-color: pink;
+  position: relative;
+  height: 8px;
+  width: 8px;
+  margin: 17px 20px;
+}
