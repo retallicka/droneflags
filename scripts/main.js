@@ -60,7 +60,7 @@ countries.addEventListener('click', function () {
 countries.addEventListener('change', function (e) {
   var img = document.getElementById('svg');
   console.log('change', e.target.value);
-  img.src = 'images/' + e.target.value + '.svg';
+  img.src = 'droneflags/images/' + e.target.value + '.svg';
   console.log(img.src);
   img.addEventListener('load', function () {
     run();
