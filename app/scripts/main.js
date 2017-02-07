@@ -11,7 +11,7 @@ function run() {
   canvas.height = img.height;
   canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
 
-  var container = document.getElementsByClassName("stars-container")[0];
+  var container = document.getElementsByClassName('stars-container')[0];
 
   container.innerHTML = '';
   var increase = Math.PI * 2 / WIDTH;
@@ -31,7 +31,7 @@ function run() {
       container.appendChild(starContainer);
       starContainer.appendChild(star);
       var pixelData = canvas.getContext('2d').getImageData(j, i, 1, 1).data;
-      star.style.backgroundColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
+      star.style.backgroundColor = 'rgb(' + pixelData[0] + ', ' + pixelData[1] + ', ' + pixelData[2] + ')';
       starContainer.style.top = ((Math.sin(counter) / 2 + 0.5) * 80) + rndm(0, 10) + 'px';
       starContainer.style.left = ((Math.sin(counter) / 2 + 0.5) * 80) + (i * 5) + rndm(0, 10) + 'px';
 
@@ -39,7 +39,7 @@ function run() {
       var w = Math.round(rndm(2, 5));
       star.style.width = w + 'px';
       star.style.height = w + 'px';
-      star.style.boxShadow = "0px 0px " + w/2 + "px " + w/2 + "px  rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
+      star.style.boxShadow = '0px 0px ' + w/2 + 'px ' + w/2 + 'px  rgb(' + pixelData[0] + ', ' + pixelData[1] + ', ' + pixelData[2] + ')';
       star.style.borderRadius = w + 'px';
       star.style.animation = 'star '+ rndm(1,4) +'s infinite alternate ease-in-out';
 
@@ -55,19 +55,19 @@ function rndm(min, max) {
 }
 
 
-var countries = document.getElementById("countries");
+var countries = document.getElementById('countries');
 
-countries.addEventListener("click", function () {
-  var options = countries.querySelectorAll("option");
+countries.addEventListener('click', function () {
+  var options = countries.querySelectorAll('option');
   var count = options.length;
 });
 
-countries.addEventListener("change", function (e) {
+countries.addEventListener('change', function (e) {
   var img = document.getElementById('svg');
   console.log('change', e.target.value);
-  img.src = '../bower_components/flag-icon-css/flags/4x3/' + e.target.value + '.svg';
+  img.src = '/images/' + e.target.value + '.svg';
   console.log(img.src);
-  img.addEventListener("load", function() {
+  img.addEventListener('load', function() {
     run();
   });
 });
