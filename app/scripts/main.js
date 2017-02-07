@@ -11,7 +11,7 @@ function run() {
   canvas.height = img.height;
   canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height);
 
-  var container = document.getElementsByClassName("star-container")[0];
+  var container = document.getElementsByClassName("stars-container")[0];
 
   container.innerHTML = '';
   var increase = Math.PI * 2 / WIDTH;
@@ -20,20 +20,28 @@ function run() {
   for (var i = 0; i < HEIGHT; i++) {
     var counter = 0;
     for (var j = 0; j < WIDTH; j++) {
-      var div = document.createElement('div');
-      div.classList.add('star');
-      container.appendChild(div);
+
+      var starContainer = document.createElement('div');
+      starContainer.classList.add('star-container');
+
+      var star = document.createElement('div');
+      star.classList.add('star');
+
+
+      container.appendChild(starContainer);
+      starContainer.appendChild(star);
       var pixelData = canvas.getContext('2d').getImageData(j, i, 1, 1).data;
-      div.style.backgroundColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
-      div.style.boxShadow = "0px 0px 3px 5px rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
-      div.style.borderRadius = "4px";
-      div.style.top = ((Math.sin(counter) / 2 + 0.5) * 80) + rndm(0, 10) + 'px';
-      div.style.left = ((Math.sin(counter) / 2 + 0.5) * 80) + (i * 5) + rndm(0, 10) + 'px';
+      star.style.backgroundColor = "rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
+      starContainer.style.top = ((Math.sin(counter) / 2 + 0.5) * 80) + rndm(0, 10) + 'px';
+      starContainer.style.left = ((Math.sin(counter) / 2 + 0.5) * 80) + (i * 5) + rndm(0, 10) + 'px';
 
 
-      // var w = rndm(2, 10) + 'px';
-      // div.style.width = w;
-      // div.style.height = w;
+      var w = Math.round(rndm(2, 5));
+      star.style.width = w + 'px';
+      star.style.height = w + 'px';
+      star.style.boxShadow = "0px 0px " + w/2 + "px " + w/2 + "px  rgb(" + pixelData[0] + ", " + pixelData[1] + ", " + pixelData[2] + ")";
+      star.style.borderRadius = w + 'px';
+      star.style.animation = 'star '+ rndm(1,4) +'s infinite alternate ease-in-out';
 
 
       counter += increase;
