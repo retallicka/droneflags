@@ -12,13 +12,23 @@ html, body{
   flex-flow: row wrap;
   max-width: 1000px;
   margin: auto;
+
+  @media (max-width: 850px) {
+    zoom: 0.7;
+  }
+  @media (max-width: 600px) {
+    zoom: 0.5;
+  }
+  @media (max-width: 420px) {
+    zoom: 0.3;
+  }
 }
 
 .star-container {
   position: relative;
   height: 8px;
   width: 8px;
-  margin: 17px 20px;
+  margin: 1.7% 2%;
 }
 
 .star {
