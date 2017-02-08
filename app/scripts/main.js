@@ -26,11 +26,10 @@
     for (var i = 0;i<data.length;i++) {
       var countries = document.getElementById('countries');
       var o = document.createElement('option');
-      o.value = data[i].code;
+      o.value = data[i].code.toLowerCase();
       o.innerHTML = data[i].name;
       countries.appendChild(o);
     }
-    run();
   }
 
   function run() {
@@ -55,14 +54,12 @@
         var star = document.createElement('div');
         star.classList.add('star');
 
-
         container.appendChild(starContainer);
         starContainer.appendChild(star);
         var pixelData = canvas.getContext('2d').getImageData(j, i, 1, 1).data;
         star.style.backgroundColor = 'rgb(' + pixelData[0] + ', ' + pixelData[1] + ', ' + pixelData[2] + ')';
         starContainer.style.top = ((Math.sin(counter) / 2 + 0.5) * 80) + rndm(0, 10) + 'px';
         starContainer.style.left = ((Math.sin(counter) / 2 + 0.5) * 80) + (i * 5) + rndm(0, 10) + 'px';
-
 
         var w = Math.round(rndm(2, 5));
         star.style.width = w + 'px';
@@ -71,17 +68,14 @@
         star.style.borderRadius = w + 'px';
         star.style.animation = 'star '+ rndm(1,4) +'s infinite alternate ease-in-out';
 
-
         counter += increase;
       }
     }
   }
 
-
   function rndm(min, max) {
     return Math.random() * (max - min) + min;
   }
-
 
   var countries = document.getElementById('countries');
 
