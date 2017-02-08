@@ -68,43 +68,50 @@ select#countries {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  width: 1000px;
   max-width: 1000px;
   margin: auto;
 }
 
 @media (max-width: 1000px) {
   .stars-container {
-    zoom: 0.8;
+    -webkit-transform: scale(0.7, 0.7);
+            transform: scale(0.7, 0.7);
   }
 }
 
 @media (max-width: 850px) {
   .stars-container {
-    zoom: 0.7;
+    -webkit-transform: scale(0.6, 0.6);
+            transform: scale(0.6, 0.6);
   }
 }
 
 @media (max-width: 672px) {
   .stars-container {
-    zoom: 0.6;
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
   }
 }
 
 @media (max-width: 600px) {
   .stars-container {
-    zoom: 0.5;
+    -webkit-transform: scale(0.4, 0.4);
+            transform: scale(0.4, 0.4);
   }
 }
 
 @media (max-width: 480px) {
   .stars-container {
-    zoom: 0.4;
+    -webkit-transform: scale(0.3, 0.3);
+            transform: scale(0.3, 0.3);
   }
 }
 
 @media (max-width: 420px) {
   .stars-container {
-    zoom: 0.3;
+    -webkit-transform: scale(0.2, 0.2);
+            transform: scale(0.2, 0.2);
   }
 }
 
