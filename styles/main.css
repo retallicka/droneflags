@@ -19,6 +19,18 @@ label {
   color: #fff;
 }
 
+@media (max-width: 850px) {
+  label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 750px) {
+  label {
+    margin: 1rem 1.5rem;
+  }
+}
+
 select#countries {
   min-width: 275px;
   font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
@@ -40,6 +52,12 @@ select#countries {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 300px;
+}
+
+@media (max-width: 750px) {
+  select#countries {
+    width: 100%;
+  }
 }
 
 .stars-container {
