@@ -72,15 +72,33 @@ select#countries {
   margin: auto;
 }
 
+@media (max-width: 1000px) {
+  .stars-container {
+    zoom: 0.8;
+  }
+}
+
 @media (max-width: 850px) {
   .stars-container {
     zoom: 0.7;
   }
 }
 
+@media (max-width: 672px) {
+  .stars-container {
+    zoom: 0.6;
+  }
+}
+
 @media (max-width: 600px) {
   .stars-container {
     zoom: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .stars-container {
+    zoom: 0.4;
   }
 }
 
@@ -94,7 +112,7 @@ select#countries {
   position: relative;
   height: 8px;
   width: 8px;
-  margin: 1.7% 2%;
+  margin: 17px 20px;
 }
 
 @-webkit-keyframes star {
