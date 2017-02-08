@@ -28,11 +28,10 @@
     for (var i = 0; i < data.length; i++) {
       var countries = document.getElementById('countries');
       var o = document.createElement('option');
-      o.value = data[i].code;
+      o.value = data[i].code.toLowerCase();
       o.innerHTML = data[i].name;
       countries.appendChild(o);
     }
-    run();
   }
 
   function run() {
