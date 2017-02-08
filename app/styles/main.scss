@@ -19,9 +19,18 @@ body{
 label {
   font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
   color: #fff;
+  @media (max-width: 850px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 750px) {
+    margin: 1rem 1.5rem;
+  }
 }
 
 select#countries {
+  @media (max-width: 750px) {
+    width: 100%;
+  }
   min-width: 275px;
   font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
   -webkit-appearance: button;
