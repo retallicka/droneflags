@@ -56,7 +56,7 @@ select#countries {
 
 @media (max-width: 750px) {
   select#countries {
-    width: 100%;
+    width: 92%;
   }
 }
 
