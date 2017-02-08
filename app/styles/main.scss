@@ -29,7 +29,7 @@ label {
 
 select#countries {
   @media (max-width: 750px) {
-    width: 100%;
+    width: 92%;
   }
   min-width: 275px;
   font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
@@ -59,11 +59,20 @@ select#countries {
   max-width: 1000px;
   margin: auto;
 
+  @media (max-width: 1000px) {
+    zoom: 0.8;
+  }
   @media (max-width: 850px) {
     zoom: 0.7;
   }
+  @media (max-width: 672px) {
+    zoom: 0.6;
+  }
   @media (max-width: 600px) {
     zoom: 0.5;
+  }
+  @media (max-width: 480px) {
+    zoom: 0.4;
   }
   @media (max-width: 420px) {
     zoom: 0.3;
@@ -74,7 +83,7 @@ select#countries {
   position: relative;
   height: 8px;
   width: 8px;
-  margin: 1.7% 2%;
+  margin: 17px 20px;
 }
 
 @keyframes star {
